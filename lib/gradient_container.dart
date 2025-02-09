@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:roll_dice_teach/dice_roller.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'dart:async';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -12,6 +14,9 @@ class GradientContainer extends StatelessWidget {
 
   @override
   Widget build(context) {
+    Timer(Duration(seconds: 2), () {
+      FlutterNativeSplash.remove();
+    });
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
